@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Linkedin } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -13,6 +14,10 @@ const Hero = () => {
 
   const openCV = () => {
     window.open('/lovable-uploads/22270fd1-4825-47c5-83b7-5c2f5c833456.png', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/vishalsb17', '_blank');
   };
 
   return (
@@ -42,6 +47,10 @@ const Hero = () => {
             </Button>
             <Button onClick={openCV} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
               My CV
+            </Button>
+            <Button onClick={openLinkedIn} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
+              <Linkedin className="mr-2 h-5 w-5" />
+              LinkedIn
             </Button>
             <Button onClick={() => scrollToSection("#contact")} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
               Contact Me
