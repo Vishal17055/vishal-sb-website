@@ -1,7 +1,5 @@
-
 import { Button } from "@/components/ui/button";
 import { Linkedin } from "lucide-react";
-
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -11,17 +9,13 @@ const Hero = () => {
       });
     }
   };
-
   const openCV = () => {
     window.open('/lovable-uploads/22270fd1-4825-47c5-83b7-5c2f5c833456.png', '_blank');
   };
-
   const openLinkedIn = () => {
     window.open('https://www.linkedin.com/in/vishalsb17', '_blank');
   };
-
-  return (
-    <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
+  return <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center animate-fade-in">
           <div className="mb-8">
@@ -33,9 +27,7 @@ const Hero = () => {
             <span className="text-blue-600">Vishal SB</span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mb-6">
-            Aspiring Full Stack Developer.
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-medium text-gray-700 mb-6">Aspiring  Developer.</h2>
           
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Computer Science student passionate about building solutions through code.
@@ -58,8 +50,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
