@@ -1,4 +1,6 @@
+
 import { Button } from "@/components/ui/button";
+
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -8,7 +10,13 @@ const Hero = () => {
       });
     }
   };
-  return <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
+
+  const openCV = () => {
+    window.open('/lovable-uploads/22270fd1-4825-47c5-83b7-5c2f5c833456.png', '_blank');
+  };
+
+  return (
+    <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center animate-fade-in">
           <div className="mb-8">
@@ -32,12 +40,17 @@ const Hero = () => {
             <Button onClick={() => scrollToSection("#portfolio")} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
               View My Work
             </Button>
+            <Button onClick={openCV} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
+              My CV
+            </Button>
             <Button onClick={() => scrollToSection("#contact")} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
               Contact Me
             </Button>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
